@@ -1,0 +1,113 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezados */
+h1, h2 {
+    color: #2196F3;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #2196F3;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1565C0;
+}
+
+/* Tarjetas */
+.card {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que las tarjetas tengan altura total */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas: Hacer que las tarjetas tengan la misma altura */
+.card-body {
+    flex-grow: 1; /* Permite que el contenido de la tarjeta ocupe todo el espacio disponible */
+}
+
+/* Iconos dentro de las tarjetas */
+.card i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Texto dentro de las tarjetas */
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2196F3;
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    .btn-lg {
+        padding: 10px 20px;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
+/* Asegura que el body ocupe toda la altura de la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Establece el contenedor principal como un contenedor flex */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Asegura que ocupe al menos el 100% de la altura */
+}
+
+/* Hace que el contenido crezca y empuje al footer al final */
+.main-content {
+    flex-grow: 1;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Asegura que el footer esté al final */
+    position: relative;
+    width: 100%;
+}
+
+/* Ajustes para el contenido dentro del footer (opcional) */
+footer p {
+    margin: 5px 0;
+}
