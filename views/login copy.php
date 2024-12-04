@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,17 +21,10 @@ session_start();
         </a>
     </div>
 </header>
-<?php if(isset($_SESSION['Registro'])): ?>
 
-<div class="alert alert-info alert-dismissible fade show" role="alert">
-    <?php echo $_SESSION['Registro']; ?>
-</div>
-
-<?php unset($_SESSION['Registro']); ?> 
-<?php endif; ?>
 <div class="container mt-5">
     <h3 class="text-center">Iniciar sesión</h3>
-    <form action="../handler/login_handler.php" method="POST" class="col-md-6 mx-auto">
+    <form action="login_handler.php" method="POST" class="col-md-6 mx-auto">
         <div class="mb-3">
             <label for="email" class="form-label">Correo Electrónico</label>
             <input type="email" class="form-control" id="email" name="email" required>

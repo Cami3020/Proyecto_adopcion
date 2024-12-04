@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,6 +25,15 @@
                 <a class="navbar-brand d-flex align-items-center" href="index.php">
                     <img src="../img/sitting.png" alt="Adopción Responsable" style="width: 100px; height: auto; filter: saturate(50%);">
                     <h2 class="d-inline-block ms-2" style="font-size: 1.5rem;">Adopción Responsable</h2>
+                    <?php
+                    session_start();
+                    ?>
+                    <?php 
+                    if(!empty($_SESSION)){
+                       echo" <p>".$_SESSION["email"]."</p>";
+                    }
+                    ?>
+                    
                 </a>
             </div>
 

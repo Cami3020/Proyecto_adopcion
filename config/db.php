@@ -1,9 +1,12 @@
 <?php
-try {
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="adopciones";
 
-    $conn = new PDO("mysql:host=localhost;dbname=Adopciones", "root", "");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Error de conexión: " . $e->getMessage());
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error){
+    die("conexion fallida.");
 }
+
 ?>

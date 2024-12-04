@@ -4,11 +4,12 @@ USE Adopciones;
 
 -- Tabla de Refugios
 CREATE TABLE Refugios (
-    refugio_id VARCHAR(20) PRIMARY KEY, 
+    cedula VARCHAR(20) PRIMARY KEY, 
     nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL;
     ubicacion VARCHAR(200),
     telefono VARCHAR(20),
-    contacto VARCHAR(100)
+    password VARCHAR(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Tabla de Mascotas
@@ -68,5 +69,6 @@ CREATE TABLE Usuarios (
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL, 
     cedula INT NOT NULL UNIQUE, -- Cédula de identificación (si aplica)
-    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    rol VARCHAR(20) NOT NULL;
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

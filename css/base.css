@@ -9,12 +9,12 @@ body {
 
 /* Encabezados */
 h1, h2 {
-    color: #2196F3;
+    color: #3B4452;
 }
 
 /* Botones */
 .btn-primary {
-    background-color: #2196F3;
+    background-color: #3B4452;
     border: none;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -60,7 +60,7 @@ h1, h2 {
 
 /* Pie de página */
 footer {
-    background-color: #2196F3;
+    background-color: #3B4452;
     color: #FFFFFF;
     padding: 10px 0;
     text-align: center;
@@ -98,7 +98,7 @@ html, body {
 
 /* Estilo para el footer */
 footer {
-    background-color: #2196F3;
+    background-color: #3B4452;
     color: white;
     text-align: center;
     padding: 20px;
