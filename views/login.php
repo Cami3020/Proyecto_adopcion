@@ -24,6 +24,7 @@ session_start();
         </a>
     </div>
 </header>
+<!-- Si logra registrar lo redirecciona -->
 <?php if(isset($_SESSION['Registro'])): ?>
 
 <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -32,6 +33,27 @@ session_start();
 
 <?php unset($_SESSION['Registro']); ?> 
 <?php endif; ?>
+
+<!-- Si el usuario no existe-->
+<?php if(isset($_SESSION['usuario_inexistente'])): ?>
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <?php echo $_SESSION['usuario_inexistente']; ?>
+</div>
+
+<?php unset($_SESSION['usuario_inexistente']); ?> 
+<?php endif; ?>
+
+<!-- Si hay fallo en contraseña o usuario-->
+<?php if(isset($_SESSION['error_inicio'])): ?>
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <?php echo $_SESSION['error_inicio']; ?>
+</div>
+
+<?php unset($_SESSION['error_inicio']); ?> 
+<?php endif; ?>
+
 <div class="container mt-5">
     <h3 class="text-center">Iniciar sesión</h3>
     <form action="../handler/login_handler.php" method="POST" class="col-md-6 mx-auto">
