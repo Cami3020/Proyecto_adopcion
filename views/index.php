@@ -1,5 +1,7 @@
 <?php include('../includes/header.php'); ?>
-<?php include('../includes/navbar.php'); ?>
+ <?php  include('../includes/navbar.php');
+ ?>
+
 
 <!-- Banner Hero -->
 <div class="bg-primary text-white text-center py-5">

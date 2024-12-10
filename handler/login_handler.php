@@ -16,6 +16,7 @@ if (!empty($_POST)) {
             if (password_verify($password, $row["password"])) {
                 $_SESSION['inicio_Sesion'] = [
                     'nombre' => $row['nombre'],
+                    'rol' => $row['rol'],
                     'mostrarUs' => true
                 ];
                 header("Location: ../includes/header.php");
@@ -38,6 +39,7 @@ if (!empty($_POST)) {
                 if (password_verify($password, $row["password"])) {
                     $_SESSION['inicio_Sesion'] = [
                         'nombre' => $row['nombre'],
+                        'rol' => 'refugio',
                         'mostrarUs' => true
                     ];
                     header("Location: ../includes/header.php");

@@ -19,6 +19,7 @@ session_start();
 
     <!-- Iconos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -51,11 +52,6 @@ session_start();
                 <!-- Cuadros de nombre del cliente y cerrar sesión -->
                 <div class="col-4 text-end" id="se_inicio_sesion" style="display: none;">
                     <!-- Nombre -->
-                    <?php
-                    //if (!empty($_SESSION["nombre"])) {
-                    //    echo  "<p>" . $_SESSION["nombre"] . "</p>";
-                    //}
-                    ?>
                     <?php if (isset($_SESSION['inicio_Sesion']['nombre'])): ?>
                             <?php echo  "<p>" . $_SESSION['inicio_Sesion']['nombre'] . "</p>";?>
                     <?php endif; ?>
@@ -92,4 +88,3 @@ session_start();
         
     </script>
     
-    <?php unset($_SESSION['inicio_Sesion']); ?>
