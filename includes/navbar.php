@@ -30,7 +30,7 @@ if (!empty($_SESSION['inicio_Sesion'])) {
         ];
     }else{
         $listadoItems = [
-            ["url" => "explorar_mascotas.php", "title" => "Explorar Mascotas", "icon" => "bi-search"],
+            ["url" => "index_refugio.php", "title" => "Animales en Adopción", "icon" => "bi-search"],
             ["url" => "recursos_educativos.php", "title" => "Recursos", "icon" => "bi-book"],
         ];
     }
